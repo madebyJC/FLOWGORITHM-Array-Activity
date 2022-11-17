@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="JANCARLOPAREDES"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-14 06:29:14 pm"/>
+        <attribute name="created" value="SkFOQ0FSTE9QQVJFREVTO0RFU0tUT1AtNzQ1R1ZOMzsyMDIyLTExLTE0OzA2OjE1OjM5IHBtOzM0NzY="/>
+        <attribute name="edited" value="SkFOQ0FSTE9QQVJFREVTO0RFU0tUT1AtNzQ1R1ZOMzsyMDIyLTExLTE0OzA2OjI5OjE0IHBtOzE7MzU4Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="loop, voltageInput, voltageCount" type="Integer" array="False" size=""/>
+            <declare name="voltageArray" type="Integer" array="True" size="10"/>
+            <assign variable="voltageCount" expression="0"/>
+            <output expression="&quot;Enter ten voltage value to initalize volts: &quot;" newline="True"/>
+            <for variable="loop" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Enter your voltage value: &quot;" newline="True"/>
+                <input variable="voltageInput"/>
+                <assign variable="voltageArray[loop]" expression="voltageInput"/>
+            </for>
+            <output expression="&quot;Given voltage values in array: &quot;" newline="True"/>
+            <for variable="loop" start="0" end="9" direction="inc" step="1">
+                <output expression="voltageArray[loop]" newline="True"/>
+                <if expression="voltageArray[loop] == 5">
+                    <then>
+                        <assign variable="voltageCount" expression="voltageCount + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Total 5V voltage: &quot; &amp; voltageCount" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

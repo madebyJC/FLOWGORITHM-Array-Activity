@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="JANCARLOPAREDES"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-14 06:33:53 pm"/>
+        <attribute name="created" value="SkFOQ0FSTE9QQVJFREVTO0RFU0tUT1AtNzQ1R1ZOMzsyMDIyLTExLTE0OzA2OjI5OjM2IHBtOzM0Nzg="/>
+        <attribute name="edited" value="SkFOQ0FSTE9QQVJFREVTO0RFU0tUT1AtNzQ1R1ZOMzsyMDIyLTExLTE0OzA2OjMzOjUzIHBtOzE7MzU4MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="loop, num, result" type="Integer" array="False" size=""/>
+            <declare name="SetA" type="Integer" array="True" size="5"/>
+            <assign variable="result" expression="0"/>
+            <output expression="&quot;Enter five numbers to initialize the total sum: &quot;" newline="True"/>
+            <for variable="loop" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Enter the number values here: &quot;" newline="True"/>
+                <input variable="num"/>
+                <assign variable="SetA[loop]" expression="num"/>
+                <assign variable="result" expression="result + num"/>
+            </for>
+            <output expression="&quot;The given number values in array: &quot;" newline="True"/>
+            <for variable="loop" start="0" end="4" direction="inc" step="1">
+                <output expression="SetA[loop]" newline="True"/>
+            </for>
+            <output expression="&quot;The total sum of the array of numbers: &quot; &amp; result" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

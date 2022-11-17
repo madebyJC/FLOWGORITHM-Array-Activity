@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="JANCARLOPAREDES"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-14 06:47:59 pm"/>
+        <attribute name="created" value="SkFOQ0FSTE9QQVJFREVTO0RFU0tUT1AtNzQ1R1ZOMzsyMDIyLTExLTE0OzA2OjI5OjM2IHBtOzM0Nzg="/>
+        <attribute name="edited" value="SkFOQ0FSTE9QQVJFREVTO0RFU0tUT1AtNzQ1R1ZOMzsyMDIyLTExLTE0OzA2OjQ3OjU5IHBtOzI7MzU5Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="loop, num, firstResult, secondResult, firstTotal, secondTotal" type="Integer" array="False" size=""/>
+            <declare name="SetA" type="Integer" array="True" size="5"/>
+            <declare name="SetB" type="Integer" array="True" size="5"/>
+            <assign variable="firstResult" expression="0"/>
+            <assign variable="secondResult" expression="0"/>
+            <output expression="&quot;Enter five numbers to initialize the total average: &quot;" newline="True"/>
+            <for variable="loop" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Enter the number values here: &quot;" newline="True"/>
+                <input variable="num"/>
+                <assign variable="SetA[loop]" expression="num"/>
+                <assign variable="firstResult" expression="firstResult + num"/>
+            </for>
+            <output expression="&quot;Enter another five numbers to initialize the total average: &quot;" newline="True"/>
+            <for variable="loop" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;Enter the number values here: &quot;" newline="True"/>
+                <input variable="num"/>
+                <assign variable="SetB[loop]" expression="num"/>
+                <assign variable="secondResult" expression="secondResult + num"/>
+            </for>
+            <output expression="&quot;The first given number values in array: &quot;" newline="True"/>
+            <for variable="loop" start="0" end="4" direction="inc" step="1">
+                <output expression="SetA[loop]" newline="True"/>
+            </for>
+            <output expression="&quot;The second given number values in array: &quot;" newline="True"/>
+            <for variable="loop" start="0" end="4" direction="inc" step="1">
+                <output expression="SetB[loop]" newline="True"/>
+            </for>
+            <assign variable="firstTotal" expression="firstResult / 5"/>
+            <assign variable="secondTotal" expression="secondResult / 5"/>
+            <output expression="&quot;The SetA array of number average is: &quot; &amp; firstTotal" newline="True"/>
+            <output expression="&quot;The SetB array of number average is: &quot; &amp; secondTotal" newline="True"/>
+            <if expression="firstTotal = secondTotal">
+                <then>
+                    <output expression="&quot;Both SetA and SetB average is equal&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="firstTotal &gt; secondTotal">
+                        <then>
+                            <output expression="&quot;SetA average is higher than SetB average&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;SetB average is higher than SetA average&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
